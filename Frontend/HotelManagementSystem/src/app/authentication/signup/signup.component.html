@@ -1,0 +1,96 @@
+<head>
+
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<div class="signup-form">
+		<form [formGroup]="signupForm" #myForm="ngForm">
+
+			<h2>Sign Up</h2>
+			<p>
+				Please fill in this form to create an account!</p>
+			<hr>
+			<div class="form-group">
+				<div class="input-group"> <span class="input-group-addon"><i class="fa fa-user"></i></span>
+					<input [class.is-invalid]="username?.invalid && username?.touched" type="text" class="form-control"
+						name="username" placeholder="Username" formControlName="username" required="required">
+				</div>
+			</div>
+			<div *ngIf="username?.invalid && username?.touched">
+				<small *ngIf="username?.errors!['required']" class="text-danger"> Username is required</small>
+				<small *ngIf="username?.errors!['minlength']" class="text-danger">Username must be at least 7
+					characters</small>
+				<small *ngIf="username?.errors!['maxlength']" class="text-danger">Username is not more than 32
+					characters</small>
+				<small *ngIf="signupForm.get('username')?.errors!['pattern']" class="text-danger">Username should be
+					Alphabet</small>
+
+
+			</div>
+
+			<div class="form-group">
+				<div class="input-group"> <span class="input-group-addon"><i class="fa fa-user-circle"></i></span>
+
+
+					<select formControlName="roles" class="form-control" name="roles" placeholder="roles"
+						(click)="validateRole(roles!.value)" (blur)="validateRole(roles!.value)"
+						[class.is-invalid]="roleHasError && roles!.touched"
+						[class.is-valid]="!roleHasError && roles!.touched">
+						<option value="Role" selected>Role</option>
+						<option value="ROLE_OWNER">Owner</option>
+						<option value="ROLE_MANAGER">Manager</option>
+						<option value="ROLE_RECEPTIONIST">Receptionist</option>
+					</select>
+
+
+					<small class="text-danger"
+						[class.d-none]="!roleHasError ||signupForm.get('roles')?.untouched">Please
+						select the Role</small>
+				</div><br>
+
+
+				<div class="form-group">
+					<div class="input-group"> <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+
+						<input formControlName="password" type="password" class="form-control" name="password"
+							placeholder="Password" required [class.is-invalid]="password!.invalid && password!.touched"
+							[class.is-valid]="password!.valid && !password!.errors">
+					</div>
+					<div *ngIf="password!.invalid && password!.touched">
+						<small class="text-danger" *ngIf="password!.errors!['required']">Password is required</small>
+						<small *ngIf="password?.errors!['minlength']" class="text-danger">Password must be at least 8
+							characters</small>
+
+						<small *ngIf="password?.errors!['maxlength']" class="text-danger">Password is not more than 32
+							characters</small>
+
+					</div><br>
+					<div class="form-group">
+						<div class="input-group"> <span class="input-group-addon">
+								<i class="fa fa-lock"></i><i class="fa fa-check"></i>
+							</span> <input formControlName="confirmPassword" type="password" class="form-control"
+								name="confirm_password" placeholder="Confirm Password" required
+								[class.is-invalid]="confirmPassword!.invalid && confirmPassword!.touched"
+								[class.is-valid]="confirmPassword!.valid && !confirmPassword!.errors">
+						</div>
+						<div *ngIf="confirmPassword!.invalid && confirmPassword!.touched">
+							<small class="text-danger" *ngIf="confirmPassword!.errors!['required']">Confirm Password is
+								required</small> <small class="text-danger"
+								*ngIf="confirmPassword!.errors!['matching']">Password
+								doesn't match</small>
+						</div>
+
+					</div>
+				</div>
+				<div class="form-group"> <label class="checkbox-inline"><input type="checkbox" required="required"> I
+						accept
+						the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label></div>
+				<div class="form-group"> <button type="submit" (click)="onSubmit()" class="btn btn-primary btn-lg"
+						[disabled]="!myForm.form.valid">Sign
+						Up</button> </div>
+				<div class="text-center"><b>Already have an account? </b><a routerLink="/authentication/login"><b>Login
+							here</b></a>
+				</div>

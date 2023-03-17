@@ -1,0 +1,130 @@
+/* input {
+    width: 250px;
+    align-items: center;
+}
+
+.card {
+
+    color: black;
+    height: 530px;
+    width: 500px;
+    align-items: center;
+    margin-left: 400px;
+    margin-top: 30px;
+}
+
+.container {
+    margin-right: 100px;
+    margin-top: 50px;
+
+
+}
+
+.card-body {
+    font-size: 22px;
+}
+
+.container-fluid {
+    text-align: center;
+    background-color: rgb(47, 217, 255)
+}
+
+.form-control {
+    border-radius: 100px;
+}
+
+.form-group {
+    border-radius: 10%;
+} */
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+     width: 350px;
+    margin: auto;
+    text-align: center;
+    font-family: cursive;
+    height: auto; 
+}
+
+.price {
+    color: grey;
+    font-size: 22px;
+}
+
+.column button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color:purple;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.column button:hover {
+    opacity: 0.7;
+}
+
+.column {
+    float: left;
+    width: 20%;
+    padding: 0 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 270px;
+    margin: auto;
+    text-align: center;
+    font-family: serif;
+}
+
+.row {
+    margin: 0 -5px;
+    border-collapse:separate;
+    border-spacing:0 15px;
+    padding-top: 80px;
+
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h3 {
+    font-family: cursive;
+}
+
+h2 {
+    font-family: cursive;
+    text-align: center;
+}
+.navbar {
+    background-color:purple;
+    height: 60px;
+}
+
+.banner-image {
+    background-image: url("/assets/img/Free-Hotel-Management-Software.jpg");
+    background-size: cover;
+
+    width: 100px;
+    height: 100px;
+
+}
+li{
+    padding-bottom: 10px;
+}
+.navbar-brand{
+    padding-bottom: 10px;
+}
+button{
+    background-color: purple;
+    color: aliceblue;
+}
+.btn{
+    background-color:greenyellow;
+    color: aliceblue;
+}
+

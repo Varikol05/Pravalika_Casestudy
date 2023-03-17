@@ -1,0 +1,13 @@
+.navbar {
+    background-color: #B22222;
+    height: 60px;
+}
+
+.banner-image {
+    background-image: url("/assets/img/Free-Hotel-Management-Software.jpg");
+    background-size: cover;
+
+    width: 100px;
+    height: 100px;
+
+}

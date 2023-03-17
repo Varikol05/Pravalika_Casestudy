@@ -1,0 +1,23 @@
+.navbar {
+    background-color:purple;
+    height: 60px;
+}
+.mt-5{
+    text-align: center;
+    color:purple;
+}
+.btn btn-danger btn-block{
+    text-align: center;
+    
+}
+
+body {
+    background-image: url("/assets/img/payment2.jpg");
+    background-size: cover;
+    height: 600px;
+    position: sticky;
+    
+
+    
+}
+

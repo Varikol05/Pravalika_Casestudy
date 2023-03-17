@@ -1,0 +1,10 @@
+.navbar {
+    background-color: #008fd1;
+    height: 70px;}
+
+.banner-image {
+    background-image: url("/assets/img/Owner2.jpg");
+    background-size: cover;
+
+
+}

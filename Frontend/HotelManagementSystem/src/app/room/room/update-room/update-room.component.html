@@ -1,0 +1,53 @@
+<div class="container-fluid">
+    <h3>Update Room</h3>
+    <div class="card">
+        <div class="card-body">
+
+
+            <form [formGroup]="updateForm" (ngSubmit)="PutData()">
+                <br><br>
+
+                <div class="form-group">
+                    <label>Room Status</label>
+                    <input
+                        [class.is-invalid]="updateForm.get('roomStatus')?.touched &&updateForm.get('roomStatus')?.invalid"
+                        type="text" class="form-control" formControlName="roomStatus" name="roomStatus"
+                        placeholder="Enter Room Status" required="required">
+                    <div *ngIf="updateForm.get('roomStatus')?.touched &&updateForm.get('roomStatus')?.invalid">
+                        <small *ngIf="updateForm.get('roomStatus')?.errors!['required']" class="text-danger">Room Status
+                            is
+                            required</small>
+                    </div><br>
+
+                    <div class="form-group">
+                        <label>Room Type</label>
+                        <input
+                            [class.is-invalid]="updateForm.get('roomType')?.touched &&updateForm.get('roomType')?.invalid"
+                            type="text" class="form-control" formControlName="roomType" name="roomType"
+                            placeholder="Enter Room Type" required="required">
+                        <div *ngIf="updateForm.get('roomType')?.touched &&updateForm.get('roomType')?.invalid">
+                            <small *ngIf="updateForm.get('roomType')?.errors!['required']" class="text-danger">Room Type
+                                is
+                                required</small>
+                        </div><br>
+
+                        <div class="form-group">
+                            <label>Room Price</label>
+                            <input
+                                [class.is-invalid]="updateForm.get('roomPrice')?.touched &&updateForm.get('roomPrice')?.invalid"
+                                type="text" class="form-control" formControlName="roomPrice" name="roomPrice"
+                                placeholder="Enter Room Price" required="required">
+                            <div *ngIf="updateForm.get('roomPrice')?.touched &&updateForm.get('roomPrice')?.invalid">
+                                <small *ngIf="updateForm.get('roomPrice')?.errors!['required']" class="text-danger">Room
+                                    Price is
+                                    required</small>
+                            </div><br>
+
+
+                            <button class="btn btn-primary" type="submit">Submit</button>
+
+
+
+                        </div>
+                    </div>
+                </div>

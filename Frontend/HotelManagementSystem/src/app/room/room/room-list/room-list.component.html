@@ -1,0 +1,41 @@
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<h1>Room Details
+
+    <a class="nav-link text-white" href="createroom">Back</a>
+
+</h1>
+<div style="float: right;">
+
+    <br><br>
+</div>
+<!-- <div class="form-outline">
+    <input class="form-control input-lg" type="text" placeholder="Search By RoomType" name="searchText"
+        [(ngModel)]="searchText">
+</div> -->
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>RoomNumber</th>
+            <th>RoomStatus</th>
+            <th>RoomType</th>
+            <th>RoomPrice</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let room of rooms | roomfilter: searchText">
+            <td>{{room.roomNumber}}</td>
+            <td>{{room.roomStatus}}</td>
+            <td>{{room.roomType}}</td>
+            <td>{{room.roomPrice}}</td>
+
+            <td>
+                <button class="btn btn-info"><a [routerLink]="['/updateroom',room.roomNumber]"><i class="material-icons"
+                            id="update">&#xe3c9;</i></a></button>&nbsp;
+
+
+        </tr>
+    </tbody>
+</table>

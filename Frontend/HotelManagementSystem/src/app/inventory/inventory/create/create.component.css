@@ -1,0 +1,57 @@
+input {
+    width: 250px;
+    align-items: center;
+}
+
+.card {
+
+    color: black;
+    height: 540px;
+    width: 500px;
+    align-items: center;
+    margin-left: 400px;
+    margin-top: 30px;
+}
+
+.container {
+    margin-right: 100px;
+    margin-top: 50px;
+
+
+}
+
+.card-body {
+    font-size: 20px;
+}
+
+.container-fluid {
+    text-align: center;
+    background-color: plum;
+    padding-top: 80px;
+}
+
+.form-control {
+    border-radius: 100px;
+}
+
+.form-group {
+    border-radius: 20%;
+}
+
+.navbar {
+    background-color: purple;
+    height: 60px;
+}
+
+li {
+    padding-bottom: 50px;
+}
+
+.navbar-brand {
+    padding-bottom: 50px;
+}
+
+.btn {
+    background-color: purple;
+    color: aliceblue;
+}

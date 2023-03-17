@@ -1,0 +1,51 @@
+input {
+    width: 60%;
+    padding: 8px 2px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+
+
+}
+
+th {
+    background: linear-gradient(to right, rgb(173, 83, 137), rgba(59, 16, 83, 0.845));
+    border: 1px solid rgb(255, 254, 254);
+    color: white;
+}
+
+tr,
+td {
+    border: 2px solid #3B3B64;
+    color: #3B3B64;
+    border-color: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+
+td,
+th {
+    text-align: center;
+    padding: 8px;
+    background-color: #def3f8;
+}
+
+h1 {
+    text-align: center;
+    color: purple;
+
+    padding-top: 100px;
+}
+
+tbody {
+    background: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+    padding-top: 100px;
+
+}
+
+.navbar {
+    background-color: purple;
+    height: 60px;
+}
